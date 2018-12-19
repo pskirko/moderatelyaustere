@@ -60,6 +60,12 @@ Source: https://unsplash.com/@englr?photo=bIhpiQA009k
 
 == Changelog ==
 
+= 1.1 =
+* Released: December 18, 2018
+
+Got rid of vh units for header and header media. Instead, picked sensible
+static heights. This fixes stuttery scroll experience on mobile (iOS at least).
+
 = 1.0 =
 * Released: December 17, 2018
 
