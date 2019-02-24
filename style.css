@@ -1558,8 +1558,9 @@ body {
 
 /* Site branding */
 
+/* TODO: Remove animation of site branding. */
 .site-branding {
-	padding: 1em 0;
+	padding: 1.5rem 0;
 	position: relative;
 	-webkit-transition: margin-bottom 0.2s;
 	transition: margin-bottom 0.2s;
@@ -1654,7 +1655,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
 	display: table;
-	height: 500px;
+	height: 30rem;
 	width: 100%;
 }
 
@@ -3277,7 +3278,7 @@ p > object:only-child {
 	/* Site Branding */
 
 	.site-branding {
-		padding: 3em 0;
+		padding: 1.5rem 0;
 	}
 
 	/* Front Page */
@@ -3435,7 +3436,7 @@ p > object:only-child {
 	}
 
 	.custom-logo-link {
-		padding-right: 2em;
+		padding-right: 1.5rem;
 	}
 
 	.custom-logo-link img,
@@ -3717,23 +3718,17 @@ p > object:only-child {
 	.moderatelyaustere-front-page.has-header-video .custom-header-media,
 	.home.blog.has-header-image .custom-header-media,
 	.home.blog.has-header-video .custom-header-media {
-		height: 500px;
+		height: 30rem;
 		max-height: 100%;
 		overflow: hidden;
 	}
 
+  /* TODO: I'm not sure what this is used for, TBD. */
 	.moderatelyaustere-front-page.has-header-image .custom-header-media:before,
 	.moderatelyaustere-front-page.has-header-video .custom-header-media:before,
 	.home.blog.has-header-image .custom-header-media:before,
 	.home.blog.has-header-video .custom-header-media:before {
 		height: 33%;
-	}
-
-	.admin-bar.moderatelyaustere-front-page.has-header-image .custom-header-media,
-	.admin-bar.moderatelyaustere-front-page.has-header-video .custom-header-media,
-	.admin-bar.home.blog.has-header-image .custom-header-media,
-	.admin-bar.home.blog.has-header-video .custom-header-media {
-		height: 468px;  /* = 500 - 32 */
 	}
 
 	.panel-content .wrap {
