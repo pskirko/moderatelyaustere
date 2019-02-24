@@ -26,7 +26,7 @@ Description: Used to style Gutenberg Blocks in the editor.
 }
 
 .editor-default-block-appender input[type="text"].editor-default-block-appender__content {
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .edit-post-visual-editor .editor-block-list__block {
@@ -35,7 +35,7 @@ Description: Used to style Gutenberg Blocks in the editor.
 
 .editor-post-title__block .editor-post-title__input {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-weight: 300;

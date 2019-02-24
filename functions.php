@@ -104,7 +104,7 @@ function moderatelyaustere_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, and column width.
  	 */
-	add_editor_style( array( 'assets/css/editor-style.css', moderatelyaustere_fonts_url() ) );
+	add_editor_style( array( 'assets/css/editor-style.css', moderatelyaustere_fonts_url(), moderatelyaustere_legacy_fonts_url() ) );
 
 	// Load regular editor styles into the new block-based editor.
 	add_theme_support( 'editor-styles' );
@@ -265,9 +265,9 @@ function moderatelyaustere_content_width() {
 add_action( 'template_redirect', 'moderatelyaustere_content_width', 0 );
 
 /**
- * Register custom fonts.
+ * URL for the legacy font, to be removed eventually.
  */
-function moderatelyaustere_fonts_url() {
+function moderatelyaustere_legacy_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -289,6 +289,26 @@ function moderatelyaustere_fonts_url() {
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * URL for the main site font.
+ */
+function moderatelyaustere_fonts_url() {
+	$fonts_url = '';
+
+  $font_families = array();
+
+	$font_families[] = 'Open Sans:300,300i,400,400i,600,600i,700,700i,800,800i';
+
+	$query_args = array(
+		'family' => urlencode( implode( '|', $font_families ) ),
+		'subset' => urlencode( 'latin,latin-ext' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 
 	return esc_url_raw( $fonts_url );
 }
@@ -419,7 +439,9 @@ add_action( 'wp_head', 'moderatelyaustere_colors_css_wrap' );
  */
 function moderatelyaustere_scripts() {
 	// Add custom fonts, used in the main stylesheet.
+  // TODO: Remove Libre Franklin once 100% transitioned over.
 	wp_enqueue_style( 'moderatelyaustere-fonts', moderatelyaustere_fonts_url(), array(), null );
+	wp_enqueue_style( 'moderatelyaustere-legacy-fonts', moderatelyaustere_legacy_fonts_url(), array(), null );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'moderatelyaustere-style', get_stylesheet_uri() );
@@ -481,6 +503,7 @@ function moderatelyaustere_block_editor_styles() {
 	wp_enqueue_style( 'moderatelyaustere-block-editor-style', get_theme_file_uri( '/assets/css/editor-blocks.css' ) );
 	// Add custom fonts.
 	wp_enqueue_style( 'moderatelyaustere-fonts', moderatelyaustere_fonts_url(), array(), null );
+	wp_enqueue_style( 'moderatelyaustere-legacy-fonts', moderatelyaustere_legacy_fonts_url(), array(), null );
 }
 add_action( 'enqueue_block_editor_assets', 'moderatelyaustere_block_editor_styles' );
 
