@@ -2,7 +2,7 @@
 Contributors: Peter Skirko for Moderately Austere; the Wordpress team for the original Twenty Seventeen theme.
 Requires at least: WordPress 4.7
 Tested up to: WordPress 5.0-trunk
-Version: 1.1
+Version: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -23,7 +23,7 @@ For more information on Twenty Seventeen, please go to https://codex.wordpress.o
 
 == Copyright ==
 
-Moderately Austere WordPress Theme, Copyright 2018 Peter Skirko
+Moderately Austere WordPress Theme, Copyright 2018-2019 Peter Skirko
 Moderately Austere is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -59,6 +59,13 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://unsplash.com/@englr?photo=bIhpiQA009k
 
 == Changelog ==
+
+= 1.2 =
+* Released: February 24, 2019
+
+Switched the main site font to Open Sans. Also, various header tweaks: removed
+the gradient, added a box shadow to the logo, and tightened up padding and other
+layout properties.
 
 = 1.1 =
 * Released: December 18, 2018
